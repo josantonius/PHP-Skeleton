@@ -1,23 +1,46 @@
 <?php
-namespace Koriym\PhpSkeleton;
+/**
+ * Created in order to provide project skeleton to start new PHP project.
+ *
+ * @author    Josantonius <hello@josantonius.com>
+ * @copyright 2017 (c) Josantonius - PHP-Skeleton
+ * @license   https://opensource.org/licenses/MIT - The MIT License (MIT)
+ * @link      https://github.com/Josantonius/PHP-Skeleton
+ * @since     1.0.0
+ **/
+namespace Josantonius\Skeleton;
 
 use Composer\Factory;
 use Composer\IO\IOInterface;
 use Composer\Json\JsonFile;
 use Composer\Script\Event;
 
+/**
+ * Installer handler.
+ *
+ * @since 1.0.0
+ */
 class Installer
 {
     /**
+     * @since 1.0.0
+     *
      * @var array
      */
     private static $packageName;
 
     /**
+     * @since 1.0.0
+     *
      * @var string
      */
     private static $name;
 
+    /**
+     * @since 1.0.0
+     *
+     * @return void
+     */
     public static function preInstall(Event $event)
     {
         $io = $event->getIO();
@@ -33,6 +56,11 @@ class Installer
         $io->write("<info>composer.json for {$composerDefinition['name']} is created.\n</info>");
     }
 
+    /**
+     * @since 1.0.0
+     *
+     * @return void
+     */
     public static function postInstall(Event $event = null)
     {
         unset($event);
@@ -52,6 +80,8 @@ class Installer
     }
 
     /**
+     * @since 1.0.0
+     *
      * @param IOInterface $io
      * @param string      $question
      * @param string      $default
@@ -70,8 +100,12 @@ class Installer
     }
 
     /**
+     * @since 1.0.0
+     *
      * @param string   $path
      * @param callable $job
+     *
+     * @return void
      */
     private static function recursiveJob($path, $job)
     {
@@ -82,6 +116,8 @@ class Installer
     }
 
     /**
+     * @since 1.0.0
+     *
      * @param string   $name
      * @param string   $vendor
      * @param string   $package
@@ -104,6 +140,8 @@ class Installer
     }
 
     /**
+     * @since 1.0.0
+     *
      * @param string $vendor
      * @param string $package
      *
@@ -118,6 +156,7 @@ class Installer
             }
             $contents = file_get_contents($file);
             $contents = str_replace('__Vendor__', "{$vendor}", $contents);
+            $contents = str_replace('__vendor__', "{strtolower($vendor)}", $contents);
             $contents = str_replace('__Package__', "{$package}", $contents);
             $contents = str_replace('__year__', date('Y'), $contents);
             $contents = str_replace('__name__', self::$name, $contents);
@@ -128,6 +167,8 @@ class Installer
     }
 
     /**
+     * @since 1.0.0
+     *
      * @param string $name
      *
      * @return string
@@ -137,6 +178,11 @@ class Installer
         return strtolower(preg_replace('/([a-zA-Z])(?=[A-Z])/', '$1-', $name));
     }
 
+    /**
+     * @since 1.0.0
+     *
+     * @return void
+     */
     private static function getUserName()
     {
         $author = `git config --global user.name`;

@@ -1,7 +1,46 @@
 # A standard PHP project skeleton
-(former [php/skeleton](https://packagist.org/packages/php/skeleton))
+
+[![Latest Stable Version](https://poser.pugx.org/josantonius/Skeleton/v/stable)](https://packagist.org/packages/josantonius/Skeleton) [![Latest Unstable Version](https://poser.pugx.org/josantonius/Skeleton/v/unstable)](https://packagist.org/packages/josantonius/Skeleton) [![License](https://poser.pugx.org/josantonius/Skeleton/license)](LICENSE) [![Total Downloads](https://poser.pugx.org/josantonius/Skeleton/downloads)](https://packagist.org/packages/josantonius/Skeleton) [![PSR4](https://img.shields.io/badge/PSR-4-9b59b6.svg)](http://www.php-fig.org/psr/psr-4/)
+
+[Versión en español](README-ES.md)
 
 This project was created in order to provide project skeleton to start new PHP project.
+
+---
+
+- [Requirements](#requirements)
+- [Create project](#create-project)
+- [Composer scripts](#composer-scripts)
+- [TODO](#-todo)
+- [Contribute](#contribute)
+- [License](#license)
+
+---
+
+## Requirements
+
+This project is supported by **PHP versions 5.6** or higher and is compatible with **HHVM versions 3.0** or higher.
+
+## Create project
+
+You'll need [Composer](http://getcomposer.org/download/).
+    
+```
+composer create-project josantonius/skeleton {project-path}
+
+What is the vendor name ?
+
+(MyVendor): Josantonius
+
+What is the package name ?
+
+(MyPackage): AwesomeProject
+
+What is your name ?
+
+(Josantonius):
+```
+
 Various config files are ready for continuous integration.
 
  * phpunit.xml.dist for [phpunit](http://phpunit.de/manual/current/en/index.html)
@@ -9,59 +48,44 @@ Various config files are ready for continuous integration.
  * phpcs.xml for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer/wiki)
  * .php_cs for [php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
  * .travis.yml for [Travis CI](https://travis-ci.org/)
- * .scrutinizer for [scrutinizer-ci](https://scrutinizer-ci.com/)
- 
-## Getting started
 
-### Create project
+## Composer scripts
 
-    
-```
-composer create-project koriym/php-skeleton {project-path}
+### tests
 
-What is the vendor name ?
-
-(MyVendor):Koriym
-
-What is the package name ?
-
-(MyPackage):AwesomeProject
-
-What is your name ?
-
-(Akihito Koriyama):
-```
-
-# Composer scripts
-
-## test
-
-`composer test` run [`phpcs`](https://github.com/squizlabs/PHP_CodeSniffer), [`phpmd`](https://github.com/phpmd/phpmd) and [`phpunit`](https://github.com/sebastianbergmann/phpunit). Run `phpunit` for unit test only.
+`composer tests` run [`phpcs`](https://github.com/squizlabs/PHP_CodeSniffer), [`phpmd`](https://github.com/phpmd/phpmd) and [`phpunit`](https://github.com/sebastianbergmann/phpunit). Run `phpunit` for unit test only.
 
 ```
-composer test
+composer tests
 ```
 
-## coverage
+### fix
 
-`composer coverage` builds test coverage report.
-
-```
-composer coverage
-```
-## cs-fix
-
-`composer cs-fix` run [`php-cs-fixer`](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and [`phpcbf`](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically) to fix up the PHP code to follow the coding standards. (Check only command `compposer cs` is also available.)
+`composer fix` run [`php-cs-fixer`](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and [`phpcbf`](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically) to fix up the PHP code to follow the coding standards.
 
 ```
-composer cs-fix
+composer fix
 ```
 
-## build
+## ☑ TODO
 
-`composer build` run [`phploc`](https://github.com/sebastianbergmann/phploc), [`pdepend`](https://pdepend.org/) and `test` above. It's handy for Jenkins. 
-You need *composer require* `phploc/phploc` and `pdepend/pdepend` for this.
+- [ ] Improve documentation
 
-```
-composer build
-```
+## Contribute
+
+If you would like to help, please take a look at the list of
+[issues](https://github.com/Josantonius/PHP-Skeleton/issues) or the [To Do](#-todo) checklist.
+
+**Pull requests**
+
+* [Fork and clone](https://help.github.com/articles/fork-a-repo).
+* Run the command `composer install` to install the dependencies.
+  This will also install the [dev dependencies](https://getcomposer.org/doc/03-cli.md#install).
+* Run the command `composer fix` to excute code standard fixers.
+* Run the [tests](#tests).
+* Create a **branch**, **commit**, **push** and send me a
+  [pull request](https://help.github.com/articles/using-pull-requests).
+
+## License
+
+This project is licensed under **MIT license**. See the [LICENSE](LICENSE) file for more info.
