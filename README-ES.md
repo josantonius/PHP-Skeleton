@@ -26,7 +26,7 @@ Este proyecto es soportado por versiones de **PHP 5.6** o superiores y es compat
 You'll need [Composer](http://getcomposer.org/download/).
     
 ```
-composer create-project josantonius/skeleton {project-path}
+composer create-project josantonius/php-skeleton {project-path}
 
 What is the vendor name ?
 
