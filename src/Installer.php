@@ -67,17 +67,29 @@ class Installer
         list($vendorName, $packageName) = self::$packageName;
         $skeletonRoot = dirname(__DIR__);
         self::recursiveJob("{$skeletonRoot}", self::rename($vendorName, $packageName));
+        
         //mv
-        $skeletonPhp = __DIR__ . '/Skeleton.php';
-        copy($skeletonPhp, "{$skeletonRoot}/src/{$packageName}.php");
-        $gitattributes = __DIR__ . '/gitattributes.txt';
-        copy($gitattributes, "{$skeletonRoot}/.gitattributes");
-        $readme = __DIR__ . '/README_EN.md';
-        copy($readme, "{$skeletonRoot}/README.md");
-        $readmeES = __DIR__ . '/README_ES.md';
-        copy($readmeES, "{$skeletonRoot}/README-ES.md");
-        $skeletonTest = "{$skeletonRoot}/tests/SkeletonTest.php";
-        copy($skeletonTest, "{$skeletonRoot}/tests/{$packageName}Test.php");
+        copy(
+            $skeletonPhp = __DIR__ . '/Skeleton.php',
+            "{$skeletonRoot}/src/{$packageName}.php"
+        );
+        copy(
+            $gitattributes = "{$skeletonRoot}/gitattributes.txt",
+            "{$skeletonRoot}/.gitattributes"
+        );
+        copy(
+            $readme = "{$skeletonRoot}/README_EN.md",
+            "{$skeletonRoot}/README.md"
+        );
+        copy(
+            $readmeES = "{$skeletonRoot}/README_ES.md",
+            "{$skeletonRoot}/README-ES.md"
+        );
+        copy(
+            $skeletonTest = "{$skeletonRoot}/tests/SkeletonTest.php",
+            "{$skeletonRoot}/tests/{$packageName}Test.php"
+        );
+
         // remove installer files
         unlink($skeletonRoot . '/README.md');
         unlink($skeletonRoot . '/README-ES.md');
