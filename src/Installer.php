@@ -67,7 +67,7 @@ class Installer
         list($vendorName, $packageName) = self::$packageName;
         $skeletonRoot = dirname(__DIR__);
         self::recursiveJob("{$skeletonRoot}", self::rename($vendorName, $packageName));
-        
+
         //mv
         copy(
             $skeletonPhp = __DIR__ . '/Skeleton.php',
@@ -86,8 +86,12 @@ class Installer
             "{$skeletonRoot}/README-ES.md"
         );
         copy(
-            $skeletonTest = "{$skeletonRoot}/tests/SkeletonTest.php",
+            $test = "{$skeletonRoot}/tests/SkeletonTest.php",
             "{$skeletonRoot}/tests/{$packageName}Test.php"
+        );
+        copy(
+            $exception = __DIR__ . "/Exception/SkeletonException.php",
+            __DIR__ . "/Exception/{$packageName}Exception.php"
         );
 
         // remove installer files
@@ -97,7 +101,8 @@ class Installer
         unlink($readme);
         unlink($readmeES);
         unlink($skeletonPhp);
-        unlink($skeletonTest);
+        unlink($test);
+        unlink($exception);
         unlink(__FILE__);
     }
 
