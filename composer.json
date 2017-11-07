@@ -24,9 +24,6 @@
         "forum": "http://stackoverflow.com/tags/josantonius/php-skeleton",
         "source": "https://github.com/josantonius/php-skeleton"
     },
-    "config": {
-        "preferred-install": "dist"
-    },
     "require": {
         "php": "^5.6 || ^7.0"
     },
