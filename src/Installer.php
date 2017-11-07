@@ -81,6 +81,9 @@ class Installer
         // remove installer files
         unlink($skeletonRoot . '/README.md');
         unlink($skeletonRoot . '/README-ES.md');
+        unlink($gitattributes);
+        unlink($readme);
+        unlink($readmeES);
         unlink($skeletonPhp);
         unlink($skeletonTest);
         unlink(__FILE__);
