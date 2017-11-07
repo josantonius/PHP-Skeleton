@@ -70,7 +70,7 @@ class Installer
         //mv
         $skeletonPhp = __DIR__ . '/Skeleton.php';
         copy($skeletonPhp, "{$skeletonRoot}/src/{$packageName}.php");
-        $gitattributes = __DIR__ . '/gitattributes';
+        $gitattributes = __DIR__ . '/_gitattributes';
         copy($gitattributes, "{$skeletonRoot}/.gitattributes");
         $readme = __DIR__ . '/README_EN.md';
         copy($readme, "{$skeletonRoot}/README.md");
