@@ -70,12 +70,19 @@ class Installer
         //mv
         $skeletonPhp = __DIR__ . '/Skeleton.php';
         copy($skeletonPhp, "{$skeletonRoot}/src/{$packageName}.php");
-        $skeletoTest = "{$skeletonRoot}/tests/SkeletonTest.php";
-        copy($skeletoTest, "{$skeletonRoot}/tests/{$packageName}Test.php");
+        $gitattributes = __DIR__ . '/gitattributes';
+        copy($gitattributes, "{$skeletonRoot}/.gitattributes");
+        $readme = __DIR__ . '/README_EN.md';
+        copy($readme, "{$skeletonRoot}/README.md");
+        $readmeES = __DIR__ . '/README_ES.md';
+        copy($readmeES, "{$skeletonRoot}/README-ES.md");
+        $skeletonTest = "{$skeletonRoot}/tests/SkeletonTest.php";
+        copy($skeletonTest, "{$skeletonRoot}/tests/{$packageName}Test.php");
         // remove installer files
         unlink($skeletonRoot . '/README.md');
+        unlink($skeletonRoot . '/README-ES.md');
         unlink($skeletonPhp);
-        unlink($skeletoTest);
+        unlink($skeletonTest);
         unlink(__FILE__);
     }
 
