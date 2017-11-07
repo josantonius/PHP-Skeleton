@@ -7,7 +7,7 @@
  * @license   https://opensource.org/licenses/MIT - The MIT License (MIT)
  * @link      https://github.com/__Vendor__/PHP-__Package__
  * @since     1.0.0
- **/
+ */
 namespace __Vendor__\__Package__\Exception;
 
 /**
