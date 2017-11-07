@@ -1,6 +1,6 @@
 # A standard PHP project skeleton
 
-[![Latest Stable Version](https://poser.pugx.org/josantonius/Skeleton/v/stable)](https://packagist.org/packages/josantonius/Skeleton) [![Latest Unstable Version](https://poser.pugx.org/josantonius/Skeleton/v/unstable)](https://packagist.org/packages/josantonius/Skeleton) [![License](https://poser.pugx.org/josantonius/Skeleton/license)](LICENSE) [![Total Downloads](https://poser.pugx.org/josantonius/Skeleton/downloads)](https://packagist.org/packages/josantonius/Skeleton) [![PSR4](https://img.shields.io/badge/PSR-4-9b59b6.svg)](http://www.php-fig.org/psr/psr-4/)
+[![Latest Stable Version](https://poser.pugx.org/josantonius/Skeleton/v/stable)](https://packagist.org/packages/josantonius/Skeleton) [![Latest Unstable Version](https://poser.pugx.org/josantonius/Skeleton/v/unstable)](https://packagist.org/packages/josantonius/Skeleton) [![License](https://poser.pugx.org/josantonius/Skeleton/license)](LICENSE) [![Total Downloads](https://poser.pugx.org/josantonius/Skeleton/downloads)](https://packagist.org/packages/josantonius/Skeleton) [![PSR2](https://img.shields.io/badge/PSR-2-1abc9c.svg)](http://www.php-fig.org/psr/psr-2/) [![PSR4](https://img.shields.io/badge/PSR-4-9b59b6.svg)](http://www.php-fig.org/psr/psr-4/)
 
 [English version](README.md)
 
