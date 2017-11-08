@@ -24,6 +24,10 @@
         "forum": "http://stackoverflow.com/tags/__vendor__/__prefix____package__",
         "source": "https://github.com/__vendor__/__prefix____package__"
     },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "stable",
     "require": {
         "php": "^5.6 || ^7.0"
     },
