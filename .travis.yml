@@ -25,6 +25,10 @@ php:
   
 matrix:
   fast_finish: true
+  include:
+    - php: 7.1
+      env: PHPCS=PSR2
+
   allow_failures:
     - php: nightly
 
@@ -34,9 +38,13 @@ before_script:
   - travis_retry composer install --no-interaction --prefer-source --dev
 
 script:
-  - phpcs --standard=phpcs.ruleset.xml $(find . -name '*.php')
-  - phpmd src,tests text ./phpmd.xml
   - phpunit
+  - |
+    if [[ "$PHPCS" ]] ; then
+      phpcs --standard=phpcs.ruleset.xml $(find . -name '*.php')
+      phpmd src,tests text ./phpmd.xml
+    fi
+    phpunit --coverage-clover=coverage.xml
 
 after_success:
  - bash <(curl -s https://codecov.io/bash)
