@@ -1,6 +1,6 @@
 # PHP __Package__ library
 
-[![Latest Stable Version](https://poser.pugx.org/__vendor__/__PREFIX____Package__/v/stable)](https://packagist.org/packages/__vendor__/__PREFIX____Package__) [![Latest Unstable Version](https://poser.pugx.org/__vendor__/__PREFIX____Package__/v/unstable)](https://packagist.org/packages/__vendor__/__PREFIX____Package__) [![License](https://poser.pugx.org/__vendor__/__PREFIX____Package__/license)](LICENSE) [![Codacy Badge](https://www.codacy.com/project/badge/0c4e0d2297414c09949f369226a6ba80)](https://www.codacy.com/app/__Vendor__/__PREFIX____Package__) [![Total Downloads](https://poser.pugx.org/__vendor__/__Vendor__/downloads)](https://packagist.org/packages/__vendor__/__Vendor__) [![Travis](https://travis-ci.org/__Vendor__/__PREFIX____Package__.svg)](https://travis-ci.org/__Vendor__/__PREFIX____Package__) [![PSR2](https://img.shields.io/badge/PSR-2-1abc9c.svg)](http://www.php-fig.org/psr/psr-2/) [![PSR4](https://img.shields.io/badge/PSR-4-9b59b6.svg)](http://www.php-fig.org/psr/psr-4/) [![CodeCov](https://codecov.io/gh/__Vendor__/__PREFIX____Package__/branch/master/graph/badge.svg)](https://codecov.io/gh/__Vendor__/__PREFIX____Package__)
+[![Latest Stable Version](https://poser.pugx.org/__vendor__/__PREFIX____Package__/v/stable)](https://packagist.org/packages/__vendor__/__PREFIX____Package__) [![Latest Unstable Version](https://poser.pugx.org/__vendor__/__PREFIX____Package__/v/unstable)](https://packagist.org/packages/__vendor__/__PREFIX____Package__) [![License](https://poser.pugx.org/__vendor__/__PREFIX____Package__/license)](LICENSE) [![Codacy Badge](https://www.codacy.com/project/badge/00000000000000000000000000000000)](https://www.codacy.com/app/__Vendor__/__PREFIX____Package__) [![Total Downloads](https://poser.pugx.org/__vendor__/__PREFIX____Package__/downloads)](https://packagist.org/packages/__vendor__/__Vendor__) [![Travis](https://travis-ci.org/__Vendor__/__PREFIX____Package__.svg)](https://travis-ci.org/__Vendor__/__PREFIX____Package__) [![PSR2](https://img.shields.io/badge/PSR-2-1abc9c.svg)](http://www.php-fig.org/psr/psr-2/) [![PSR4](https://img.shields.io/badge/PSR-4-9b59b6.svg)](http://www.php-fig.org/psr/psr-4/) [![CodeCov](https://codecov.io/gh/__Vendor__/__PREFIX____Package__/branch/master/graph/badge.svg)](https://codecov.io/gh/__Vendor__/__PREFIX____Package__)
 
 [English version](README.md)
 
@@ -16,6 +16,7 @@ Descripción.
 - [Tests](#tests)
 - [Tareas pendientes](#-tareas-pendientes)
 - [Contribuir](#contribuir)
+- [Repositorio](#repositorio)
 - [Licencia](#licencia)
 - [Copyright](#copyright)
 
@@ -43,9 +44,9 @@ También puedes **clonar el repositorio** completo con Git:
 
 O **instalarlo manualmente**:
 
-[Descargar __Vendor__.php](https://raw.githubusercontent.com/__Vendor__/__PREFIX____Package__/master/src/__Vendor__.php):
+[Descargar __Vendor__.php](https://raw.githubusercontent.com/__Vendor__/__PREFIX____Package__/master/src/__Package__.php):
 
-    $ wget https://raw.githubusercontent.com/__Vendor__/__PREFIX____Package__/master/src/__Vendor__.php
+    $ wget https://raw.githubusercontent.com/__Vendor__/__PREFIX____Package__/master/src/__Package__.php
 
 ## Métodos disponibles
 
@@ -57,7 +58,7 @@ __Package__::sample($attr);
 
 | Atributo | Descripción | Tipo | Requerido | Predeterminado
 | --- | --- | --- | --- | --- |
-| $attr | Descripción. | [TYPO DE DATO] | [Sí/No] | [] |
+| $attr | Descripción. | [TIPO DE DATO] | [Sí/No] | [] |
 
 **# Return** (string) → Descripción.
 
@@ -135,6 +136,10 @@ Si deseas colaborar, puedes echar un vistazo a la lista de
 * Ejecuta las [pruebas](#tests).
 * Crea una nueva rama (**branch**), **commit**, **push** y envíame un
   [pull request](https://help.github.com/articles/using-pull-requests).
+
+## Repositorio
+
+La estructura de archivos de este repositorio se creó con [PHP-Skeleton](https://github.com/Josantonius/PHP-Skeleton).
 
 ## Licencia
 
