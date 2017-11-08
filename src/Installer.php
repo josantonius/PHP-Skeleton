@@ -2,6 +2,7 @@
 /**
  * Created in order to provide project skeleton to start new PHP project.
  *
+ * @author    Koriyama <akihito.koriyama@gmail.com>
  * @author    Josantonius <hello@josantonius.com>
  * @copyright 2017 (c) Josantonius - PHP-Skeleton
  * @license   https://opensource.org/licenses/MIT - The MIT License (MIT)
@@ -32,9 +33,23 @@ class Installer
     /**
      * @since 1.0.0
      *
+     * @var array
+     */
+    private static $packagePrefix;
+
+    /**
+     * @since 1.0.0
+     *
      * @var string
      */
     private static $name;
+
+    /**
+     * @since 1.0.0
+     *
+     * @var string
+     */
+    private static $version;
 
     /**
      * @since 1.0.0
@@ -44,16 +59,34 @@ class Installer
     public static function preInstall(Event $event)
     {
         $io = $event->getIO();
-        $vendorClass = self::ask($io, 'What is the vendor name ?', 'MyVendor');
+
+        $vendorClass = self::ask($io, 'What is the vendor name ?', self::getUserName());
         $packageClass = self::ask($io, 'What is the package name ?', 'MyPackage');
+        $packagePrefix = self::ask($io, 'What is the package prefix ?', '');
+        self::$version = self::ask($io, 'What is the version ?', '1.0.0');
         self::$name = self::ask($io, 'What is your name ?', self::getUserName());
-        $packageName = sprintf('%s/%s', self::camel2dashed($vendorClass), self::camel2dashed($packageClass));
+        self::$email = self::ask($io, 'What is your email ?', self::getUserEmail());
+
+        $packageName = sprintf(
+            '%s/%s',
+            self::camel2dashed($vendorClass),
+            self::camel2dashed($packageClass)
+        );
+
         $json = new JsonFile(Factory::getComposerFile());
-        $composerDefinition = self::getDefinition($vendorClass, $packageClass, $packageName, $json);
         self::$packageName = [$vendorClass, $packageClass];
-        // Update composer definition
-        $json->write($composerDefinition);
-        $io->write("<info>composer.json for {$composerDefinition['name']} is created.\n</info>");
+
+        $definition = self::getDefinition(
+            $vendorClass,
+            $packageClass,
+            $packageName,
+            $json
+        );
+
+        $json->write($definition);
+        $io->write(
+            "<info>composer.json for {$definition['name']} created.\n</info>"
+        );
     }
 
     /**
@@ -63,46 +96,34 @@ class Installer
      */
     public static function postInstall(Event $event = null)
     {
+        $skeletonRoot = dirname(__DIR__);
         unset($event);
         list($vendorName, $packageName) = self::$packageName;
-        $skeletonRoot = dirname(__DIR__);
         self::recursiveJob("{$skeletonRoot}", self::rename($vendorName, $packageName));
 
-        //mv
-        copy(
-            $skeletonPhp = __DIR__ . '/Skeleton.php',
-            "{$skeletonRoot}/src/{$packageName}.php"
-        );
-        copy(
-            $gitattributes = "{$skeletonRoot}/gitattributes.txt",
-            "{$skeletonRoot}/.gitattributes"
-        );
-        copy(
-            $readme = "{$skeletonRoot}/README_EN.md",
-            "{$skeletonRoot}/README.md"
-        );
-        copy(
-            $readmeES = "{$skeletonRoot}/README_ES.md",
-            "{$skeletonRoot}/README-ES.md"
-        );
-        copy(
-            $test = "{$skeletonRoot}/tests/SkeletonTest.php",
-            "{$skeletonRoot}/tests/{$packageName}Test.php"
-        );
-        copy(
-            $exception = __DIR__ . "/Exception/SkeletonException.php",
-            __DIR__ . "/Exception/{$packageName}Exception.php"
-        );
-
-        // remove installer files
         unlink($skeletonRoot . '/README.md');
         unlink($skeletonRoot . '/README-ES.md');
-        unlink($gitattributes);
-        unlink($readme);
-        unlink($readmeES);
+
+        $skeletonPhp = __DIR__ . '/Skeleton.php';
+        $exceptionPhp = __DIR__ . "/Exception/SkeletonException.php";
+        $gitattributesFile = "{$skeletonRoot}/gitattributes.txt";
+        $readmeFile = "{$skeletonRoot}/README_EN.md";
+        $readmeFileES = "{$skeletonRoot}/README_ES.md";
+        $testPhp = "{$skeletonRoot}/tests/SkeletonTest.php";
+
+        copy($skeletonPhp, "{$skeletonRoot}/src/{$packageName}.php");
+        copy($exceptionPhp, __DIR__ . "/Exception/{$packageName}Exception.php");
+        copy($gitattributesFile, "{$skeletonRoot}/.gitattributes");
+        copy($readmeFile, "{$skeletonRoot}/README.md");
+        copy($readmeFileES, "{$skeletonRoot}/README-ES.md");
+        copy($testPhp, "{$skeletonRoot}/tests/{$packageName}Test.php");
+
         unlink($skeletonPhp);
-        unlink($test);
-        unlink($exception);
+        unlink($exceptionPhp);
+        unlink($gitattributesFile);
+        unlink($readmeFile);
+        unlink($readmeFileES);
+        unlink($testPhp);
         unlink(__FILE__);
     }
 
@@ -136,13 +157,18 @@ class Installer
      */
     private static function recursiveJob($path, $job)
     {
-        $iterator = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($path), \RecursiveIteratorIterator::SELF_FIRST);
+        $iterator = new \RecursiveIteratorIterator(
+            new \RecursiveDirectoryIterator($path),
+            \RecursiveIteratorIterator::SELF_FIRST
+        );
         foreach ($iterator as $file) {
             $job($file);
         }
     }
 
     /**
+     * Get Composer definition.
+     *
      * @since 1.0.0
      *
      * @param string   $name
@@ -155,15 +181,21 @@ class Installer
      */
     private static function getDefinition($vendor, $package, $packageName, JsonFile $json)
     {
-        $composerDefinition = $json->read();
-        unset($composerDefinition['autoload']['files'], $composerDefinition['scripts']['pre-install-cmd'], $composerDefinition['scripts']['pre-update-cmd'], $composerDefinition['scripts']['post-create-project-cmd']);
+        $definition = $json->read();
 
-        $composerDefinition['name'] = $packageName;
-        $composerDefinition['authors'] = [['name' => self::$name]];
-        $composerDefinition['description'] = '';
-        $composerDefinition['autoload']['psr-4'] = ["{$vendor}\\{$package}\\" => 'src/'];
+        unset(
+            $definition['autoload']['files'],
+            $definition['scripts']['pre-install-cmd'],
+            $definition['scripts']['pre-update-cmd'],
+            $definition['scripts']['post-create-project-cmd']
+        );
 
-        return $composerDefinition;
+        $definition['name'] = $packageName;
+        $definition['description'] = '';
+        $definition['autoload']['psr-4'] = ["{$vendor}\\{$package}\\" => 'src/'];
+        $definition['authors'] = [['name' => self::$name]];
+
+        return $definition;
     }
 
     /**
@@ -178,16 +210,22 @@ class Installer
     {
         $jobRename = function (\SplFileInfo $file) use ($vendor, $package) {
             $fineName = $file->getFilename();
-            if ($file->isDir() || strpos($fineName, '.') === 0 || ! is_writable($file)) {
+            if ($file->isDir() || strpos($fineName, '.') === 0 || !is_writable($file)) {
                 return;
             }
-            $contents = file_get_contents($file);
-            $contents = str_replace('__Vendor__', "{$vendor}", $contents);
-            $contents = str_replace('__vendor__', "{strtolower($vendor)}", $contents);
-            $contents = str_replace('__Package__', "{$package}", $contents);
-            $contents = str_replace('__year__', date('Y'), $contents);
-            $contents = str_replace('__name__', self::$name, $contents);
-            file_put_contents($file, $contents);
+            $content = file_get_contents($file);
+            $content = str_replace('__Vendor__', "{$vendor}", $content);
+            $content = str_replace('__vendor__', strtolower($vendor), $content);
+            $content = str_replace('__Package__', "{$package}", $content);
+            $content = str_replace('__package__', strtolower($package), $content);
+            $content = str_replace('__PREFIX__', self::$packagePrefix, $content);
+            $content = str_replace('__prefix__', self::$packagePrefix, $content);
+            $content = str_replace('__year__', date('Y'), $content);
+            $content = str_replace('__month__', date('m'), $content);
+            $content = str_replace('__day__', date('d'), $content);
+            $content = str_replace('__Name__', self::$name, $content);
+            $content = str_replace('__version__', self::$version, $content);
+            file_put_contents($file, $content);
         };
 
         return $jobRename;
@@ -215,5 +253,17 @@ class Installer
         $author = `git config --global user.name`;
 
         return $author ? trim($author) : '';
+    }
+
+    /**
+     * @since 1.0.0
+     *
+     * @return void
+     */
+    private static function getUserEmail()
+    {
+        $email = `git config --global user.email`;
+
+        return $email ? trim($email) : '';
     }
 }

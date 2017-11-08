@@ -2,11 +2,11 @@
 /**
  * [FILE DESCRIPTION].
  *
- * @author    __Vendor__ <hello@__package__.com>
- * @copyright __year__ (c) __Vendor__ - PHP-__Package__
+ * @author    __Vendor__ <__email__>
+ * @copyright __year__ (c) __Vendor__ - __PREFIX____Package__
  * @license   https://opensource.org/licenses/MIT - The MIT License (MIT)
- * @link      https://github.com/__Vendor__/PHP-__Package__
- * @since     1.0.0
+ * @link      https://github.com/__Vendor__/__PREFIX____Package__
+ * @since     __version__
  */
 namespace __Vendor__\__Package__\Exception;
 
@@ -15,7 +15,7 @@ namespace __Vendor__\__Package__\Exception;
  *
  * You can use an exception and error handler with this library.
  *
- * @since 1.0.0
+ * @since __version__
  *
  * @link https://github.com/Josantonius/PHP-ErrorHandler
  */
@@ -24,7 +24,7 @@ class __Package__Exception extends \Exception
     /**
      * Exception handler.
      *
-     * @since 1.0.0
+     * @since __version__
      *
      * @param string $msg    → message error
      * @param int    $status → HTTP response status code
@@ -33,7 +33,7 @@ class __Package__Exception extends \Exception
      */
     public function __construct($msg = '', $status = 0)
     {
-        $this->message    = $msg;
+        $this->message = $msg;
         $this->statusCode = $status;
     }
 }

@@ -1,6 +1,6 @@
-# PHP __Vendor__ library
+# PHP __Package__ library
 
-[![Latest Stable Version](https://poser.pugx.org/__vendor__/__Vendor__/v/stable)](https://packagist.org/packages/__vendor__/__Vendor__) [![Latest Unstable Version](https://poser.pugx.org/__vendor__/__Vendor__/v/unstable)](https://packagist.org/packages/__vendor__/__Vendor__) [![License](https://poser.pugx.org/__vendor__/__Vendor__/license)](LICENSE) [![Codacy Badge](https://www.codacy.com/project/badge/0c4e0d2297414c09949f369226a6ba80)](https://www.codacy.com/app/__Vendor__/PHP-__Vendor__) [![Total Downloads](https://poser.pugx.org/__vendor__/__Vendor__/downloads)](https://packagist.org/packages/__vendor__/__Vendor__) [![Travis](https://travis-ci.org/__Vendor__/PHP-__Vendor__.svg)](https://travis-ci.org/__Vendor__/PHP-__Vendor__) [![PSR2](https://img.shields.io/badge/PSR-2-1abc9c.svg)](http://www.php-fig.org/psr/psr-2/) [![PSR4](https://img.shields.io/badge/PSR-4-9b59b6.svg)](http://www.php-fig.org/psr/psr-4/) [![CodeCov](https://codecov.io/gh/__Vendor__/PHP-__Vendor__/branch/master/graph/badge.svg)](https://codecov.io/gh/__Vendor__/PHP-__Vendor__)
+[![Latest Stable Version](https://poser.pugx.org/__vendor__/__PREFIX____Package__/v/stable)](https://packagist.org/packages/__vendor__/__PREFIX____Package__) [![Latest Unstable Version](https://poser.pugx.org/__vendor__/__PREFIX____Package__/v/unstable)](https://packagist.org/packages/__vendor__/__PREFIX____Package__) [![License](https://poser.pugx.org/__vendor__/__PREFIX____Package__/license)](LICENSE) [![Codacy Badge](https://www.codacy.com/project/badge/0c4e0d2297414c09949f369226a6ba80)](https://www.codacy.com/app/__Vendor__/__PREFIX____Package__) [![Total Downloads](https://poser.pugx.org/__vendor__/__Vendor__/downloads)](https://packagist.org/packages/__vendor__/__Vendor__) [![Travis](https://travis-ci.org/__Vendor__/__PREFIX____Package__.svg)](https://travis-ci.org/__Vendor__/__PREFIX____Package__) [![PSR2](https://img.shields.io/badge/PSR-2-1abc9c.svg)](http://www.php-fig.org/psr/psr-2/) [![PSR4](https://img.shields.io/badge/PSR-4-9b59b6.svg)](http://www.php-fig.org/psr/psr-4/) [![CodeCov](https://codecov.io/gh/__Vendor__/__PREFIX____Package__/branch/master/graph/badge.svg)](https://codecov.io/gh/__Vendor__/__PREFIX____Package__)
 
 [Versión en español](README-ES.md)
 
@@ -29,23 +29,23 @@ This library is supported by **PHP versions 5.6** or higher and is compatible wi
 
 The preferred way to install this extension is through [Composer](http://getcomposer.org/download/).
 
-To install **PHP __Vendor__ library**, simply:
+To install **PHP __Package__ library**, simply:
 
-    $ composer require __Vendor__/__Vendor__
+    $ composer require __Vendor__/__Package__
 
 The previous command will only install the necessary files, if you prefer to **download the entire source code** you can use:
 
-    $ composer require __Vendor__/__Vendor__ --prefer-source
+    $ composer require __Vendor__/__Package__ --prefer-source
 
 You can also **clone the complete repository** with Git:
 
-	$ git clone https://github.com/__Vendor__/PHP-__Vendor__.git
+	$ git clone https://github.com/__Vendor__/__PREFIX____Package____Vendor__.git
 
 Or **install it manually**:
 
-[Download __Vendor__.php](https://raw.githubusercontent.com/__Vendor__/PHP-__Vendor__/master/src/__Vendor__.php):
+[Download __Package__.php](https://raw.githubusercontent.com/__Vendor__/__PREFIX____Package__/master/src/__Package__.php):
 
-    $ wget https://raw.githubusercontent.com/__Vendor__/PHP-__Vendor__/master/src/__Vendor__.php
+    $ wget https://raw.githubusercontent.com/__Vendor__/__PREFIX____Package__/master/src/__Package__.php
 
 ## Available Methods
 
@@ -54,12 +54,12 @@ Available methods in this library:
 ### - Description:
 
 ```php
-__Vendor__::sample($attr);
+__Package__::sample($attr);
 ```
 
 | Attribute | Description | Type | Required | Default
 | --- | --- | --- | --- | --- |
-| $attr | Description. | int | No | 1 |
+| $attr | Description. | [DATATYPE] | [Yes/No] | [] |
 
 **# Return** (string) → Description.
 
@@ -70,15 +70,15 @@ To use this library with **Composer**:
 ```php
 require __DIR__ . '/vendor/autoload.php';
 
-use __Vendor__\__Vendor__\__Vendor__;
+use __Vendor__\_Package__\_Package__;
 ```
 
 Or If you installed it **manually**, use it:
 
 ```php
-require_once __DIR__ . '/__Vendor__.php';
+require_once __DIR__ . '/__Package__.php';
 
-use __Vendor__\__Vendor__\__Vendor__;
+use __Vendor__\_Package__\_Package__;
 ```
 
 ## Usage
@@ -94,9 +94,9 @@ Example of use for this library:
 
 To run [tests](tests) you just need [composer](http://getcomposer.org/download/) and to execute the following:
 
-    $ git clone https://github.com/__Vendor__/PHP-__Vendor__.git
+    $ git clone https://github.com/__Vendor__/__PREFIX____Package__.git
     
-    $ cd PHP-__Vendor__
+    $ cd __PREFIX____Package__
 
     $ composer install
 
@@ -126,7 +126,7 @@ Run all previous tests:
 ## Contribute
 
 If you would like to help, please take a look at the list of
-[issues](https://github.com/__Vendor__/PHP-__Vendor__/issues) or the [To Do](#-todo) checklist.
+[issues](https://github.com/__Vendor__/__PREFIX____Package__/issues) or the [To Do](#-todo) checklist.
 
 **Pull requests**
 
@@ -144,8 +144,8 @@ This project is licensed under **MIT license**. See the [LICENSE](LICENSE) file 
 
 ## Copyright
 
-__year__ __Vendor__, [__vendor__.com](https://__vendor__.com/)
+__year__ __Name__, [__name__.com](https://__name__.com/)
 
 If you find it useful, let me know :wink:
 
-You can contact me on [Twitter](https://twitter.com/__Vendor__) or through my [email](mailto:hello@__vendor__.com).
+You can contact me on [Twitter](https://twitter.com/__Name__) or through my [email](mailto:__email__).

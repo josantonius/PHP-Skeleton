@@ -2,36 +2,36 @@
 /**
  * [FILE DESCRIPTION].
  *
- * @author    __Vendor__ <hello@__package__.com>
- * @copyright __year__ (c) __Vendor__ - PHP-__Package__
+ * @author    __Vendor__ <__email__>
+ * @copyright __year__ (c) __Vendor__ - __PREFIX____Package__
  * @license   https://opensource.org/licenses/MIT - The MIT License (MIT)
- * @link      https://github.com/__Vendor__/PHP-__Package__
- * @since     1.0.0
+ * @link      https://github.com/__Vendor__/__PREFIX____Package__
+ * @since     __version__
  */
 namespace __Vendor__\__Package__;
 
 /**
  * [CLASS DESCRIPTION].
  *
- * @since 1.0.0
+ * @since __version__
  */
 class __Package__
 {
     /**
-     * [VAR DESCRIPTION].
+     * [ATTRIBUTE DESCRIPTION].
      *
-     * @since 1.0.0
+     * @since __version__
      *
-     * @var [TYPE]
+     * @var [DATATYPE]
      */
-    public static $__package__;
+    public static $sample;
 
     /**
-     * [FUNCTION DESCRIPTION].
+     * [METHOD DESCRIPTION].
      *
-     * @since 1.0.0
+     * @since __version__
      *
-     * @return [TYPE] → [DESCRIPTION]
+     * @return [DATATYPE] → [DESCRIPTION]
      */
     public static function sample()
     {

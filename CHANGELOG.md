@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 1.0.0 - 201X-XX-XX
+## __version__ - __year__-__month__-__day__
 
 * 
 * 

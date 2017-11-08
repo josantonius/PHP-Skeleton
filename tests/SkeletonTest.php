@@ -2,11 +2,11 @@
 /**
  * [FILE DESCRIPTION].
  *
- * @author    __Vendor__ <hello@__package__.com>
- * @copyright __year__ (c) __Vendor__ - PHP-__Package__
+ * @author    __Vendor__ <__email__>
+ * @copyright __year__ (c) __Vendor__ - __PREFIX____Package__
  * @license   https://opensource.org/licenses/MIT - The MIT License (MIT)
- * @link      https://github.com/__Vendor__/PHP-__Package__
- * @since     1.0.0
+ * @link      https://github.com/__Vendor__/__PREFIX____Package__
+ * @since     __version__
  */
 namespace __Vendor__\__Package__;
 
@@ -15,23 +15,23 @@ use PHPUnit\Framework\TestCase;
 /**
  * Tests class for __Package__ library.
  *
- * @since 1.0.0
+ * @since __version__
  */
 final class __Package__Test extends TestCase
 {
     /**
-     * [VAR DESCRIPTION].
+     * [ATTRIBUTE DESCRIPTION].
      *
-     * @since 1.0.0
+     * @since __version__
      *
-     * @var [TYPE]
+     * @var [DATATYPE]
      */
     protected $__Package__;
 
     /**
-     * Setup.
+     * Setup method.
      *
-     * @since 1.0.0
+     * @since __version__
      *
      * @return void
      */
@@ -42,11 +42,11 @@ final class __Package__Test extends TestCase
     }
 
     /**
-     * [FUNCTION DESCRIPTION].
+     * [METHOD DESCRIPTION].
      *
-     * @since 1.0.0
+     * @since __version__
      *
-     * @return [TYPE] → [DESCRIPTION]
+     * @return [DATATYPE] → [DESCRIPTION]
      */
     public function testNew()
     {
