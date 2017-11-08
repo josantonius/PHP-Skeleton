@@ -38,6 +38,6 @@ final class __Package__Test extends TestCase
     {
         $actual = $this->__Package__;
 
-        $this->assertInstanceOf('\__Vendor__\__Package__\__Package__', $actual);
+        $this->assertInstanceOf('__Vendor__\__Package__\__Package__', $actual);
     }
 }
