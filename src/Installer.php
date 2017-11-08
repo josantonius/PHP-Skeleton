@@ -69,7 +69,7 @@ class Installer
 
         $vendorClass = self::ask($io, 'What is the vendor name ?', self::getUserName());
         $packageClass = self::ask($io, 'What is the package name ?', 'MyPackage');
-        $prefix = self::ask($io, 'What is the package prefix ?', '');
+        self::$prefix = self::ask($io, 'What is the package prefix ?', '');
         self::$version = self::ask($io, 'What is the version ?', '1.0.0');
         self::$name = self::ask($io, 'What is your name ?', self::getUserName());
         self::$email = self::ask($io, 'What is your email ?', self::getUserEmail());
