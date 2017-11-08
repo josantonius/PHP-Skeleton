@@ -31,7 +31,7 @@ matrix:
 before_script:
   - export PATH="./vendor/bin:$PATH"
   - travis_retry composer self-update
-  - travis_retry composer install --no-interaction --prefer-source
+  - travis_retry composer install --no-interaction --prefer-source --dev
 
 script:
   - phpcs --standard=phpcs.ruleset.xml $(find . -name '*.php')
