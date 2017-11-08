@@ -33,7 +33,7 @@ composer create-project josantonius/php-skeleton {project-path}
 
 Varios archivos de configuración estarán listos para integración continua.
 
- * phpunit.xml.dist para [phpunit](http://phpunit.de/manual/current/en/index.html)
+ * phpunit.xml para [phpunit](http://phpunit.de/manual/current/en/index.html)
  * phpmd.xml para [PHPMD](https://phpmd.org)
  * phpcs.xml para [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer/wiki)
  * .php_cs para [php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
