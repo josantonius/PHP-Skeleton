@@ -35,7 +35,7 @@ class Installer
      *
      * @var array
      */
-    private static $packagePrefix;
+    private static $prefix;
 
     /**
      * @since 1.0.0
@@ -69,7 +69,7 @@ class Installer
 
         $vendorClass = self::ask($io, 'What is the vendor name ?', self::getUserName());
         $packageClass = self::ask($io, 'What is the package name ?', 'MyPackage');
-        $packagePrefix = self::ask($io, 'What is the package prefix ?', '');
+        $prefix = self::ask($io, 'What is the package prefix ?', '');
         self::$version = self::ask($io, 'What is the version ?', '1.0.0');
         self::$name = self::ask($io, 'What is your name ?', self::getUserName());
         self::$email = self::ask($io, 'What is your email ?', self::getUserEmail());
@@ -200,7 +200,12 @@ class Installer
         $definition['name'] = $packageName;
         $definition['description'] = '';
         $definition['autoload']['psr-4'] = ["{$vendor}\\{$package}\\" => 'src/'];
-        $definition['authors'] = [['name' => self::$name]];
+        $definition['authors'] = [[
+            'name' => self::$name,
+            'email' => self::$email,
+            'homepage' => 'https://' . strtolower(self::$name) . '.com',
+            'role' => 'Developer',
+        ]];
 
         return $definition;
     }
@@ -225,12 +230,14 @@ class Installer
             $content = str_replace('__vendor__', strtolower($vendor), $content);
             $content = str_replace('__Package__', "{$package}", $content);
             $content = str_replace('__package__', strtolower($package), $content);
-            $content = str_replace('__PREFIX__', self::$packagePrefix, $content);
-            $content = str_replace('__prefix__', self::$packagePrefix, $content);
+            $content = str_replace('__PREFIX__', self::$prefix, $content);
+            $content = str_replace('__prefix__', strtolower(self::$prefix), $content);
             $content = str_replace('__year__', date('Y'), $content);
             $content = str_replace('__month__', date('m'), $content);
             $content = str_replace('__day__', date('d'), $content);
             $content = str_replace('__Name__', self::$name, $content);
+            $content = str_replace('__name__', strtolower(self::$name), $content);
+            $content = str_replace('__email__', self::$email, $content);
             $content = str_replace('__version__', self::$version, $content);
             file_put_contents($file, $content);
         };
