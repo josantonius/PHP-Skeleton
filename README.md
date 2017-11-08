@@ -27,31 +27,9 @@ You'll need [Composer](http://getcomposer.org/download/).
 
 ```
 composer create-project josantonius/php-skeleton {project-path}
-
-What is the vendor name ?
-
-(MyVendor): Josantonius
-
-What is the package name ?
-
-(MyPackage): AwesomeProject
-
-What is the package prefix ?
-
-():
-
-What is the version ?
-
-(1.0.0):
-
-What is your name ?
-
-(Josantonius):
-
-What is your email ?
-
-(hello@josantonius.com):
 ```
+
+[![asciicast](https://asciinema.org/a/146511.png)](https://asciinema.org/a/146511)
 
 Various config files are ready for continuous integration.
 
