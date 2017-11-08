@@ -15,17 +15,11 @@ namespace __Vendor__\__Package__\Exception;
  *
  * You can use an exception and error handler with this library.
  *
- * @since __version__
- *
  * @link https://github.com/Josantonius/PHP-ErrorHandler
  */
 class __Package__Exception extends \Exception
 {
     /**
-     * Exception handler.
-     *
-     * @since __version__
-     *
      * @param string $msg    → message error
      * @param int    $status → HTTP response status code
      */

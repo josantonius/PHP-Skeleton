@@ -12,15 +12,11 @@ namespace __Vendor__\__Package__;
 
 /**
  * [CLASS DESCRIPTION].
- *
- * @since __version__
  */
 class __Package__
 {
     /**
      * [ATTRIBUTE DESCRIPTION].
-     *
-     * @since __version__
      *
      * @var [DATATYPE]
      */
@@ -28,8 +24,6 @@ class __Package__
 
     /**
      * [METHOD DESCRIPTION].
-     *
-     * @since __version__
      *
      * @return [DATATYPE] → [DESCRIPTION]
      */

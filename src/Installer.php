@@ -16,11 +16,6 @@ use Composer\IO\IOInterface;
 use Composer\Json\JsonFile;
 use Composer\Script\Event;
 
-/**
- * Installer handler.
- *
- * @since 1.0.0
- */
 class Installer
 {
     /**
@@ -172,6 +167,7 @@ class Installer
         $definition['name'] = $packageName;
         $definition['description'] = '';
         $definition['autoload']['psr-4'] = ["{$vendor}\\{$package}\\" => 'src/'];
+        $definition['keywords'] = ["PSR", $packageName];
         $definition['authors'] = [[
             'name' => self::$name,
             'email' => self::$email,
