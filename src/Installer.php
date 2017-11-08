@@ -77,15 +77,15 @@ class Installer
         $packageName = sprintf(
             '%s/%s',
             self::camel2dashed($vendorClass),
-            self::camel2dashed($prefix . $packageClass)
+            self::camel2dashed($packageClass)
         );
 
         $json = new JsonFile(Factory::getComposerFile());
-        self::$packageName = [$vendorClass, $prefix . $packageClass];
+        self::$packageName = [$vendorClass, $packageClass];
 
         $definition = self::getDefinition(
             $vendorClass,
-            $prefix . $packageClass,
+            $packageClass,
             $packageName,
             $json
         );
