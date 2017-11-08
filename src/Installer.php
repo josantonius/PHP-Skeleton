@@ -49,6 +49,13 @@ class Installer
      *
      * @var string
      */
+    private static $email;
+
+    /**
+     * @since 1.0.0
+     *
+     * @var string
+     */
     private static $version;
 
     /**
