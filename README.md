@@ -24,7 +24,7 @@ This project is supported by **PHP versions 5.6** or higher and is compatible wi
 ## Create project
 
 You'll need [Composer](http://getcomposer.org/download/).
-    
+
 ```
 composer create-project josantonius/php-skeleton {project-path}
 
@@ -36,9 +36,21 @@ What is the package name ?
 
 (MyPackage): AwesomeProject
 
+What is the package prefix ?
+
+():
+
+What is the version ?
+
+(1.0.0):
+
 What is your name ?
 
 (Josantonius):
+
+What is your email ?
+
+(hello@josantonius.com):
 ```
 
 Various config files are ready for continuous integration.

@@ -36,9 +36,21 @@ What is the package name ?
 
 (MyPackage): AwesomeProject
 
+What is the package prefix ?
+
+():
+
+What is the version ?
+
+(1.0.0):
+
 What is your name ?
 
 (Josantonius):
+
+What is your email ?
+
+(hello@josantonius.com):
 ```
 
 Varios archivos de configuración estarán listos para integración continua.
