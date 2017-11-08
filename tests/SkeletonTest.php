@@ -32,11 +32,9 @@ final class __Package__Test extends TestCase
     }
 
     /**
-     * [METHOD DESCRIPTION].
-     *
-     * @return [DATATYPE] → [DESCRIPTION]
+     * Check if it is an instance of __Package__.
      */
-    public function testNew()
+    public function testIsInstanceOf__Package__()
     {
         $actual = $this->__Package__;
 
