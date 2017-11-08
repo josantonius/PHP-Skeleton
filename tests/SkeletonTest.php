@@ -20,11 +20,11 @@ use PHPUnit\Framework\TestCase;
 final class __Package__Test extends TestCase
 {
     /**
-     * [ATTRIBUTE DESCRIPTION].
+     * __Package__ instance.
      *
      * @since __version__
      *
-     * @var [DATATYPE]
+     * @var object
      */
     protected $__Package__;
 
@@ -32,8 +32,6 @@ final class __Package__Test extends TestCase
      * Setup method.
      *
      * @since __version__
-     *
-     * @return void
      */
     protected function setUp()
     {

@@ -11,7 +11,7 @@
 namespace __Vendor__\__Package__\Exception;
 
 /**
- * Exception class for __Package__ library.
+ * Exception class for __PREFIX____Package__ library.
  *
  * You can use an exception and error handler with this library.
  *
@@ -28,8 +28,6 @@ class __Package__Exception extends \Exception
      *
      * @param string $msg    → message error
      * @param int    $status → HTTP response status code
-     *
-     * @return void
      */
     public function __construct($msg = '', $status = 0)
     {
