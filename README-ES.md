@@ -14,6 +14,7 @@ Este proyecto fue creado con el fin de generar la estructura de archivos y direc
 - [Tareas pendientes](#-tareas-pendientes)
 - [Contribuir](#contribuir)
 - [Licencia](#licencia)
+- [Copyright](#copyright)
 
 ---
 
@@ -79,3 +80,11 @@ Si deseas colaborar, puedes echar un vistazo a la lista de
 ## Licencia
 
 Este proyecto está licenciado bajo **licencia MIT**. Consulta el archivo [LICENSE](LICENSE) para más información.
+
+## Copyright
+
+2017 - 2018 Josantonius, [josantonius.com](https://josantonius.com/)
+
+Si te ha resultado útil, házmelo saber :wink:
+
+Puedes contactarme en [Twitter](https://twitter.com/Josantonius) o a través de mi [correo electrónico](mailto:hello@josantonius.com).

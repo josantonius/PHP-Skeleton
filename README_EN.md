@@ -119,10 +119,10 @@ Run all previous tests:
 
 ## ☑ TODO
 
-- [ ] Add new feature
-- [ ] Improve tests
-- [ ] Improve documentation
-- [ ] Refactor code
+- [ ] Add new feature.
+- [ ] Improve tests.
+- [ ] Improve documentation.
+- [ ] Refactor code for disabled code style rules. See [phpmd.xml](phpmd.xml) and [.php_cs.dist](.php_cs.dist).
 
 ## Contribute
 
@@ -138,6 +138,12 @@ If you would like to help, please take a look at the list of
 * Run the [tests](#tests).
 * Create a **branch**, **commit**, **push** and send me a
   [pull request](https://help.github.com/articles/using-pull-requests).
+
+**Thank you to all the people who already contributed to this project!**
+
+[<img alt="Josantonius" src="https://avatars3.githubusercontent.com/u/18104336?s=460&v=4" height="117" width="117">](https://github.com/Josantonius) |
+:---:|
+[Josantonius](https://github.com/Josantonius)|
 
 ## Repository
 

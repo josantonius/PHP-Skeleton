@@ -117,10 +117,10 @@ Ejecutar todas las pruebas anteriores:
 
 ## ☑ Tareas pendientes
 
-- [ ] Añadir nueva funcionalidad
-- [ ] Mejorar pruebas
-- [ ] Mejorar documentación
-- [ ] Refactorizar código
+- [ ] Añadir nueva funcionalidad.
+- [ ] Mejorar pruebas.
+- [ ] Mejorar documentación.
+- [ ] Refactorizar código para las reglas de estilo de código deshabilitadas. Ver [phpmd.xml](phpmd.xml) y [.php_cs.dist](.php_cs.dist).
 
 ## Contribuir
 
@@ -136,6 +136,12 @@ Si deseas colaborar, puedes echar un vistazo a la lista de
 * Ejecuta las [pruebas](#tests).
 * Crea una nueva rama (**branch**), **commit**, **push** y envíame un
   [pull request](https://help.github.com/articles/using-pull-requests).
+
+**¡Gracias a quienes ya habéis contribuido a este proyecto!**
+
+[<img alt="Josantonius" src="https://avatars3.githubusercontent.com/u/18104336?s=460&v=4" height="117" width="117">](https://github.com/Josantonius) |
+:---:|
+[Josantonius](https://github.com/Josantonius)|
 
 ## Repositorio
 

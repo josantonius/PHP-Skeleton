@@ -14,6 +14,7 @@ This project was created in order to provide project skeleton to start new PHP p
 - [TODO](#-todo)
 - [Contribute](#contribute)
 - [License](#license)
+- [Copyright](#copyright)
 
 ---
 
@@ -79,3 +80,11 @@ If you would like to help, please take a look at the list of
 ## License
 
 This project is licensed under **MIT license**. See the [LICENSE](LICENSE) file for more info.
+
+## Copyright
+
+2017 - 2018 Josantonius, [josantonius.com](https://josantonius.com/)
+
+If you find it useful, let me know :wink:
+
+You can contact me on [Twitter](https://twitter.com/Josantonius) or through my [email](mailto:hello@josantonius.com).
