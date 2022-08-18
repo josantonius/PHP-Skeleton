@@ -1,6 +1,7 @@
 # A standard PHP project skeleton
 
-[![Latest Stable Version](https://poser.pugx.org/josantonius/php-skeleton/v/stable)](https://packagist.org/packages/josantonius/php-skeleton) [![Latest Unstable Version](https://poser.pugx.org/josantonius/php-skeleton/v/unstable)](https://packagist.org/packages/josantonius/php-skeleton) [![License](https://poser.pugx.org/josantonius/php-skeleton/license)](LICENSE) [![Total Downloads](https://poser.pugx.org/josantonius/php-skeleton/downloads)](https://packagist.org/packages/josantonius/php-skeleton) [![PSR2](https://img.shields.io/badge/PSR-2-1abc9c.svg)](http://www.php-fig.org/psr/psr-2/) [![PSR4](https://img.shields.io/badge/PSR-4-9b59b6.svg)](http://www.php-fig.org/psr/psr-4/)
+[![Latest Stable Version](https://poser.pugx.org/josantonius/php-skeleton/v/stable)](https://packagist.org/packages/josantonius/php-skeleton)
+[![License](https://poser.pugx.org/josantonius/php-skeleton/license)](LICENSE)
 
 [Versión en español](README-ES.md)
 
@@ -11,10 +12,7 @@ This project was created in order to provide project skeleton to start new PHP p
 - [Requirements](#requirements)
 - [Create project](#create-project)
 - [Composer scripts](#composer-scripts)
-- [TODO](#-todo)
-- [Contribute](#contribute)
 - [License](#license)
-- [Copyright](#copyright)
 
 ---
 
@@ -34,11 +32,11 @@ composer create-project josantonius/php-skeleton {project-path}
 
 Various config files are ready for continuous integration.
 
- * phpunit.xml for [phpunit](http://phpunit.de/manual/current/en/index.html)
- * phpmd.xml for [PHPMD](https://phpmd.org)
- * phpcs.xml for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer/wiki)
- * .php_cs for [php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
- * .travis.yml for [Travis CI](https://travis-ci.org/)
+- phpunit.xml for [phpunit](http://phpunit.de/manual/current/en/index.html)
+- phpmd.xml for [PHPMD](https://phpmd.org)
+- phpcs.xml for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer/wiki)
+- .php_cs for [php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
+- .travis.yml for [Travis CI](https://travis-ci.org/)
 
 ## Composer scripts
 
@@ -58,33 +56,10 @@ composer tests
 composer fix
 ```
 
-## ☑ TODO
-
-- [ ] Improve documentation
-
-## Contribute
-
-If you would like to help, please take a look at the list of
-[issues](https://github.com/Josantonius/PHP-Skeleton/issues) or the [To Do](#-todo) checklist.
-
-**Pull requests**
-
-* [Fork and clone](https://help.github.com/articles/fork-a-repo).
-* Run the command `composer install` to install the dependencies.
-  This will also install the [dev dependencies](https://getcomposer.org/doc/03-cli.md#install).
-* Run the command `composer fix` to excute code standard fixers.
-* Run the [tests](#tests).
-* Create a **branch**, **commit**, **push** and send me a
-  [pull request](https://help.github.com/articles/using-pull-requests).
-
 ## License
 
-This project is licensed under **MIT license**. See the [LICENSE](LICENSE) file for more info.
+This repository is licensed under the [MIT License](LICENSE).
 
-## Copyright
+Copyright © 2013, [Koriym](https://github.com/koriym)
 
-2017 - 2018 Josantonius, [josantonius.com](https://josantonius.com/)
-
-If you find it useful, let me know :wink:
-
-You can contact me on [Twitter](https://twitter.com/Josantonius) or through my [email](mailto:hello@josantonius.com).
+Copyright © 2017-2022, [Josantonius](https://github.com/josantonius/lang/es-ES/README.md#contacto)
